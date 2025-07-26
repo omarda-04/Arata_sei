@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/verde_manzana"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <!-- Imagen con esquinas redondeadas -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_home"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/arata_logito1"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:contentDescription="Logo de Arata Sei"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/text_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:cornerRadius="16dp" />
+
+
+    <!-- Texto debajo de la imagen -->
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="Arata Sei es un shampoo diseñado para adaptarse al tipo de cabello de cada persona. Gracias a su fórmula inteligente, reacciona químicamente para proporcionar el cuidado más adecuado según las necesidades del usuario."
+        android:fontFamily="@font/dancing_script_bold"
+        app:layout_constraintTop_toBottomOf="@id/image_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
